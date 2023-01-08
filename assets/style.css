@@ -9,14 +9,25 @@ body{
   background: #007bff;
 }
 
-.buttons{
-  display: none;
+::selection{
+  color:#fff;
+  background: #007bff;
 }
-#quiz-page {
-  display: none;
+
+.start_btn,
+.quiz-page,
+.result_box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 
-#quiz-rules{
-  display: none;
+.quiz-page.activeQuiz,
+.result_box.activeResult{
+  opacity: 1;
+  z-index; 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
