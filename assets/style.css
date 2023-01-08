@@ -9,6 +9,9 @@ body{
   background: #007bff;
 }
 
+.buttons{
+  display: none;
+}
 #quiz-page {
   display: none;
 }

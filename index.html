@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
-    <title>Quiz</title>
+    <title>Sky's Quiz App</title>
   </head>
   <body>
     <section id="start-page">
       <p>Intro</p>
       <button id="start-btn">Start Quiz</button>
     </section>
-    <div id="quiz-rules"><span>Rules for this Quiz</span></div>
+    <div class="buttons">
+      <button class ="quit">Exit Quiz</button>
+      <button class = "restart"> Continue</button>
+    </div>
 
     <section id="quiz-page">
-      <p>quiz-page</p>
-      <div class="options"></div>
+      <header>
+        <div class="title">Sky's Quiz App</div>
+        <div class ="timer">
+          <div class="time_left_txt">Time Left</div>
+          <div class="timer_sec">100</div>
+        </div>
+      </header>
+      
     </section>
 
     <script src="./assets/script.js"></script>
