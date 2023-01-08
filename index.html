@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/de33d8169b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
     <title>Sky's Quiz App</title>
   </head>
@@ -24,26 +28,31 @@
           <div class="time_left_txt">Time Left</div>
           <div class="timer_sec">100</div>
         </div>
-        <div class ="time_line"></div>
+        <div class="time_line"></div>
       </header>
       <section>
-        <div class ="quiz_txt">
-  
-        </div>
-        <div class ="options">
-  
-        </div>
+        <div class="quiz_txt"></div>
+        <div class="options"></div>
       </section>
-  
-      <footer>
-        <div class="total_que">
 
-        </div>
-        <button class="next_btn"> Next Question</button>
+      <footer>
+        <div class="total_que"></div>
+        <button class="next_btn">Next Question</button>
       </footer>
     </section>
 
-  
+    <!-- Final Results-->
+    <section class="result_box">
+      <div class="icon">
+        <i class="fa-solid fa-crown"></i>
+      </div>
+      <div class="complete_text">You have Completed the Quiz!</div>
+      <div class="score_text"></div>
+      <div class="buttons">
+        <button class="restart">Restart Quiz</button>
+        <button class="quit">Quit Quiz</button>
+      </div>
+    </section>
 
     <script src="./assets/script.js"></script>
     <script src="./assets/questions.js"></script>
