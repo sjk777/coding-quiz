@@ -43,4 +43,4 @@ let questions = [
            "D"
         ]   
        },
-]
+];

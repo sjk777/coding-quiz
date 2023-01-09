@@ -1,20 +1,23 @@
-var startPage = document.getElementById("start-page");
-var quizPage = document.getElementById("quiz-page");
-var startBtn = document.getElementById("start-btn");
-var time = 100;
+var start_btn = docuement.querySelector(".start_btn button");
+var quiz-page = document.querySelector(".quiz-page");
+var result_box = document.querySelector(".result_box");
+var options_list = document.querySelector(".options_list");
+var time_line = document.querySelector("header .time_line");
+var timeText = document.querySelector(".timer .time_left_txt");
+var timeCount = document.querySelector(".timer  .timer_sec");
 
-function startFunc() {
-  console.log("click");
-  startPage.style.display = "none";
-  quizPage.style.display = "block";
-  timer();
+//start button
+start_btn.onclick = () => {
+  quiz_box.classList.add("activeQuiz");
 }
 
-function timer() {
-  var timerInterval = setInterval(function () {
-    time--;
-    console.log("Interval func");
-  }, 1000);
-}
+var timeValue = 100;
+var que_count = 0;
+var que_numb = 1;
+var userScore = 0;
+var counter;
+var counterLine;
+var widthValue = 0;
 
-startBtn.addEventListener("click", startFunc);
+var restart_quiz = result_box.querySelector(".buttons .restart");
+var quit_quiz = result_box.querySelector(".buttons .quit")
