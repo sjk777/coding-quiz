@@ -13,7 +13,7 @@ let questions = [
     {
         numb: 2,
         question: "A B C or D",
-        answer: "A"
+        answer: "A",
         options: [
            "A",
            "B",
@@ -24,7 +24,7 @@ let questions = [
        {
         numb: 3,
         question: "A B C or D",
-        answer: "A"
+        answer: "A",
         options: [
            "A",
            "B",
@@ -35,7 +35,7 @@ let questions = [
        {
         numb: 4,
         question: "A B C or D",
-        answer: "A"
+        answer: "A",
         options: [
            "A",
            "B",
