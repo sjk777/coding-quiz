@@ -41,3 +41,16 @@ var quiz=[{
     options: ["a) <script src = 'xxx.js'>", "b) script name = 'xxx.js'>", "c) <script href='xxx.js'>"]
     },
 ]
+
+function startCountdown(){
+    const interval = setInterval(() => {
+        counter --;
+        if((counter<0) || (questionCount >= 4)){
+            clearInterval(interval);
+            timer.textContent =("thats it.");
+            endOfGame();
+        }else{
+            timer.textContent="Timer:" + counter};
+    
+    }, 1000);
+};
