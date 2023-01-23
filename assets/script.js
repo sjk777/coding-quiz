@@ -1,5 +1,5 @@
-var start_btn = docuement.querySelector(".start_btn button");
-var quiz-page = document.querySelector(".quiz-page");
+var start_btn = document.querySelector(".start_btn button");
+var quiz_page = document.querySelector(".quiz-page");
 var result_box = document.querySelector(".result_box");
 var options_list = document.querySelector(".options_list");
 var time_line = document.querySelector("header .time_line");
@@ -9,7 +9,7 @@ var timeCount = document.querySelector(".timer  .timer_sec");
 //start button
 start_btn.onclick = () => {
   quiz_box.classList.add("activeQuiz");
-}
+};
 
 var timeValue = 100;
 var que_count = 0;
@@ -20,13 +20,13 @@ var counterLine;
 var widthValue = 0;
 
 var restart_quiz = result_box.querySelector(".buttons .restart");
-var quit_quiz = result_box.querySelector(".buttons .quit")
+var quit_quiz = result_box.querySelector(".buttons .quit");
 
 restart_quiz.onclick = () => {
   quiz_box.classList.add("activeQuiz");
   result_box.classList.remove("activeResult");
-  timeValue= 100;
-  que_count= 0;
+  timeValue = 100;
+  que_count = 0;
   que_numb = 1;
   userScore = 0;
   widthValue = 0;
@@ -38,17 +38,17 @@ restart_quiz.onclick = () => {
   startTimerLine(widthValue);
   timeText.textContent = "Time Left";
   next_btn.classList.remove("show");
-}
+};
 
 quit_quiz.onclick = () => {
   window.location.reload();
-}
+};
 
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
 next_btn.onclick = () => {
-  if(que_count < questions.length -1){
+  if (que_count < questions.length - 1) {
     que_count++;
     que_numb++;
     showQuestions(que_count);
@@ -59,9 +59,23 @@ next_btn.onclick = () => {
     startTimerLine(widthValue);
     timeText.textContent = "Time Left";
     next_btn.classList.remove("show");
-  }else{
+  } else {
     clearInterval(counter);
     clearInterval(counterLine);
     showResult();
   }
+};
+
+function showQuestions(index) {
+  const que_text = document.querySelector(".que_text");
+  let que_tag =
+    "<span>" +
+    questions[index].numb +
+    "." +
+    questions[index].question +
+    "</span>";
+  let option_tag =
+    '<div class= "option"><span>' +
+    questions[index].options[0] +
+    "</span></div>";
 }
