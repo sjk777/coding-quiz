@@ -1,0 +1,22 @@
+var todoList = document.querySelector("#todo-list");
+var startBtn= document.querySelector(".startbtn");
+var timer= document.querySelector(".timer");
+var hsscore = document.getElementById("highscore");
+var header = document.querySelector("header");
+var instructions= document.querySelector(".instructions");
+var points=document.querySelector(".points");
+var timer= document.querySelector(".timer");
+var questionTitle= document.querySelector(".ques");
+var logScore= document.querySelector(".saveScore");
+var quizsec =document.querySelector("#quizsec")
+var userName=document.querySelector("#name");
+var userScore =document.querySelector("#userScore");
+var submitScore= document.querySelector("#submit");
+var displayHS= document.querySelector("#HS");
+var playerScore = document.querySelector("#playerScore")
+var hsList=document.querySelector("#hsList");
+var counter = 120;
+var points=0;
+var questionIndex=0
+var questionCount=0
+
