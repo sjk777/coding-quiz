@@ -20,3 +20,24 @@ var points=0;
 var questionIndex=0
 var questionCount=0
 
+var quiz=[{
+    question: "Inside which HTML element do we put the Javscript?",
+    correctanswer: "<script>",
+    options:["a) <javascript>", "b) <js>", "c) <script>", "d) <scripting>"]
+    },
+    {
+    question: "What is the correct Javascript syntax to write 'Hello World'?",
+    correctanswer: "document.write('Hello World)",
+    options: ["a) response.write('Hello World) ", "b) 'Hello World", "c) document.write('Hello World') ", "('Hello World')"]
+    },
+    {
+    question: "Where is the correct place to insert a Javascript",
+    correctanswer: "a)Both the <head> section and the <body> section are correct",
+    options: ["a)Both the <head> section and the <body> section are correct", "b) the body section", "c) the head section", "d) the footer section"]
+    },
+    {
+    question: "What is the correct syntax for referring to an external script called 'xxx.js'? ",
+    correctanswer: "a) <script src = 'xxx.js'>",
+    options: ["a) <script src = 'xxx.js'>", "b) script name = 'xxx.js'>", "c) <script href='xxx.js'>"]
+    },
+]
