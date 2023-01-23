@@ -48,7 +48,7 @@ function startCountdown(){
         if((counter<0) || (questionCount >= 4)){
             clearInterval(interval);
             timer.textContent =("thats it.");
-            endOfGame();
+            gameOver();
         }else{
             timer.textContent="Timer:" + counter};
     
@@ -77,7 +77,7 @@ startQuestions = function(){
 };
 
 
-renderNextQuestion = fcuntion(){
+renderNextQuestion = function(){
     questionIndex++;
     questionTitle.textContent='';
     questionTitle.textContent = quiz[questionIndex].question;
@@ -115,3 +115,43 @@ var thisOrThat = document.getElementById("quizsec");
             }
         }
     });
+
+    gameOver= function(){
+        quizsec.style.display = "none";
+        todoList.style.display = "none";
+        logScore.style.display= "block";
+        userScore.value = points;
+    };
+
+    var highScoreInfo = JSON.parse(localStorage.getItem("UserInfo")) || [];
+    submitScore.addEventListener("click", function(){
+        var newUserInfo= {
+            name: userName.value,
+            score: userScore.value
+        }
+        highScoreInfo.push(newUserInfo)
+        localStorage.setItem("UserInfo", JSON.stringify(highScoreInfo));
+        var heading = document.createElement("h2");
+        heading.textContent= "submitted score";
+        highScoreDisplay.append(heading);
+
+        var hsList= document.createElement("li");
+        hsList.textContent= (newUserInfo.name + "-" + newUserInfo.score);
+        hsList.appendChild(hsList);
+        allScores=[]
+        allUsers=[]
+        var lengthlist= (highScoreInfo.length)
+        for (let i =0; i < lengthlist; i++){
+            allScores.push(highScoreInfo[i].score)
+            allUsers.push(highScoreInfo[i].name)
+        }
+
+        var max = allScores.reduce((a,b) => 
+            Math.max(a,b), -Infinity
+        );
+        console.log(allUsers);
+        console.log(allScores);
+        console.log(max)
+    });
+
+    timer.textContent="Timer: "+ counter;
