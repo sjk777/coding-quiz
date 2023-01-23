@@ -91,3 +91,27 @@ renderNextQuestion = fcuntion(){
     }
 };
 
+var thisOrThat = document.getElementById("quizsec");
+    todoList.addEventListener('click', function(event){
+        questionCount++;
+        if(event.target.matches("li")){
+            if(event.target.textContent=== quiz[questionIndex].correctanswer){
+                var rowie= document.createElement("h3");
+                rowie.textcontent= "Correct!";
+                wrongOrRight.appendChild(rowie);
+                points++;
+                playerScore.textContent= "Score: " + points;
+                setTimeout(() =>{
+                    renderNextQuestion(); rowie.textContent="";
+                }, 1000);
+            }else{
+                var rowie= document.createElement("h3");
+                rowie.textContent= "Incorrect!";
+                thisOrThat.appendChild(rowie);
+                counter = counter-4;
+                setTimeout(()=> {
+                    renderNextQuestion(); rowie.textContent= "";
+                }, 1000);
+            }
+        }
+    });
