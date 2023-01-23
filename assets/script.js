@@ -54,3 +54,40 @@ function startCountdown(){
     
     }, 1000);
 };
+
+startBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    playerScore.style.display="flex"
+    instructions.style.display="none";
+    startCountdown();
+    startQuestion();
+    playerScore.innerHTML='Score: <span class= "points"> 0</span>';
+});
+
+startQuestions = function(){
+    questionTitle.textContent= quiz[questionIndex].question;
+    var option_length = 4
+    var op = quiz[0].options;
+    for(var i = 0; i <option_length; i++){
+        var li = document.createElement("li");
+        li.textContent= op[li];
+        todoList.appendChild(li);
+
+    }
+};
+
+
+renderNextQuestion = fcuntion(){
+    questionIndex++;
+    questionTitle.textContent='';
+    questionTitle.textContent = quiz[questionIndex].question;
+    var option_length = 4
+    var op = quiz[questionIndex].options;
+    todoList.textContent= '';
+    for (var i =0; i < option_length; i++){
+        var li= document.createElement("li");
+        li.textContent= op[i];
+        todoList.appendChild(li);
+    }
+};
+
